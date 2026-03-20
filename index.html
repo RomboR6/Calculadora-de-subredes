@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Subredes</title>
+<link href="styles.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Calculadora de Subredes</h1>
+    
+    <form id="subnetForm" class="card p-4 shadow-sm">
+    <div class="mb-3">
+        <label class="form-label">Dirección IP</label>
+        <input type="text" id="ip" class="form-control" placeholder="Ej: 10.1.0.0" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Prefijo inicial (/)</label>
+        <input type="number" id="prefix" class="form-control" placeholder="Ej: 16" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Número de subredes</label>
+        <input type="number" id="subnets" class="form-control" placeholder="Ej: 16" required>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Calcular</button>
+    </form>
+
+    <div class="table-responsive mt-4">
+    <table class="table table-bordered table-striped text-center align-middle">
+        <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Dirección de red</th>
+            <th>Primera IP</th>
+            <th>Última IP</th>
+            <th>Broadcast</th>
+            <th>Máscara</th>
+            <th>Prefijo</th>
+        </tr>
+        </thead>
+        <tbody id="resultBody"></tbody>
+    </table>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
